@@ -10,7 +10,7 @@ services:
     ports:
       - "9090:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - test_postgres_data:/var/lib/postgresql/data
     command: ["postgres", "-c", "listen_addresses=*"]
 
   mongo:
@@ -23,7 +23,7 @@ services:
     ports:
       - "9091:27017"
     volumes:
-      - mongo_data:/data/db
+      - test_mongo_data:/data/db
 
   redis:
     image: redis:7
@@ -32,10 +32,10 @@ services:
     ports:
       - "9092:6379"
     volumes:
-      - redis_data:/data
+      - test_redis_data:/data
     command: ["redis-server", "--bind", "0.0.0.0", "--protected-mode", "no"]
 
 volumes:
-  postgres_data:
-  mongo_data:
-  redis_data:
+  test_postgres_data:
+  test_mongo_data:
+  test_redis_data:
