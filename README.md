@@ -17,18 +17,18 @@ Ushbu konfiguratsiya **Postgres**, **MongoDB** va **Redis** xizmatlarini `docker
 2. Terminalda quyidagi buyruqni bajaring:
 
 ```bash
-   docker compose up -d
+docker compose up -d
 ```
 3. Containerlar fon rejimida ishga tushadi. Holatini tekshirish uchun:
 
 ```bash
-   docker ps
+docker ps
 ```
 
 4. To‘xtatish uchun:
 
 ```bash
-   docker compose down
+docker compose down
 ```
 
 ### Connection info:
